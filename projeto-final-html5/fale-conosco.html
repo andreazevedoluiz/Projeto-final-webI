@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<hatml lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"/> 
+    <title> Tudo sobre o Google Class </title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    
+</head>
+<script language="javascript" src="_javascript/funcoes.js">
+</script>
+<script>
+    function calc_total(){
+        var qtd = parseInt(document.getElementById('cqtd').value);
+        tot=qtd*1500;
+        document.getElementById('cpreco').value=tot;
+    }
+</script>
+
+<body>
+    <div id = "interface"> 
+<header id="cabecalho">
+<hgroup>
+    <h1> Google Glass </h1>
+    <h2> A revolução do Google está chegando </h2>
+</hgroup>
+<figure>
+    <img id="icone" src="_imagens/glass-oculos-preto-peq.png"/>
+</figure>
+
+    <nav id="menu">
+    <h1>Menu Principal</h1>
+    <ul type="disc">
+        <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto ('_imagens/contato.png')"><a href="index.html">Home </a></li>
+        <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto ('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto ('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto ('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+        <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto ('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+    </nav>
+
+</header>
+<header>
+    <section id="corpo-full">
+        <article id="noticia-principal">
+    
+            <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>  Fale Conosco > Contato</h3>
+                <h1> Formulário de Contato </h1>
+                <h2> por André Luiz Azevêdo </h2>
+                <h3 class="direita"> Atualizado em JUNHO/2022 </h3>
+            </hgroup>
+            </header>
+
+    
+<form method="post" id="fcontatos" action="mailto: enviapraum@email.com" oninput="calc_total();" > 
+
+<fieldset id="usuario">
+    <legend> Identificação do Usuário</legend>
+    <p> <label for="tmane">  Nome: </label> <input type="text" name="tmane" id="cnome" size="50" maxlength="50" placeholder="Nome completo"></p>
+    <p> E-mail:<input type="email" name="tmail" id="cmail" size="50" maxlength="50" placeholder="Digite o e-mail"/p>
+    <fieldset id="sexo"><legend> sexo </legend>
+        <input type="radio" name="tsexo" id="cmasc"/><label for="cmasc"> Masculino</label>  <br>
+        <input type="radio" name="tsexo" id="cfam"/> <label for="cfam"> Feminino </label> 
+    </fieldset>
+    <p> Data de Nascimento: <input type="date"/></p>
+</fieldset>
+
+
+<fieldset id="endereco">
+
+ <legend> Endereço do Usuário</legend> 
+    <p>  Logradouro: <input type="text" name="trua" id="crua" size="50" maxlength="80" placeholder="Rua, Avenida, Travessa, ..." ></p>
+    <p> Número: <input type="number" name="tnumero" id="cnumero" min="0" max="99999"></p>
+    <p>  Estado: <input type="text" name="test" id="cest" size="20" maxlength="26" placeholder=" GO, BR, SP, ..." ></p>
+    <p>  Cidade: <input type="text" name="tcidade" id="ccidade" size="30" maxlength="40" ></p>   
+    </fieldset>
+
+<fieldset id="mensagem">
+     <legend>  Mensagem do Usuário</legend>
+        <p><labe for="cmsg">  Mensagem: </label> </p>
+            <textarea name="tmsg" id="cmsg" cols="70" rows="5" placeholder="Deixe aqui sua mensagem" ></textarea>
+</fieldset>
+
+<fieldset id="pagamento">
+    <legend > Quero um Google Glass </legend>
+    <p><input type="checkbox" name="tped" id="cped"><label for="cped"> Gostaria de adquirir um Google Glass</label></p>
+    <p><label for="ccor"> Cor: </label> <input type="color" name="tcor" id="ccor"></p>
+    <p><label for="cqtd"> Quantidade:</label> <input type="number" name="tqtd" id="cqtd" min="0" max="5" value="0"></p>
+    <p><label for="cpreco"> Preço Total: R$</label><input type="text" name="tpreco" id="cpreco" placeholder="total a pagar" readonly/> </p>
+    
+</fieldset>
+
+<input type="image" name="tenviar" id="cenviar" src="_imagens/botao-enviar.png">
+
+</form>
+
+<footer id="rodape">
+    <p>Copyright 2022 - by André Luiz Azevêdo 
+    <br>
+     <a href="https://www.facebook.com/" target="_blank"  > Facebook </a>|
+     <a href="https://twitter.com/" target="_blank"> Twitter </a>  </p>
+    </footer>
+    
+    </div>
+    </body>
+    </html>
